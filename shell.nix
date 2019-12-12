@@ -1,7 +1,8 @@
 let
-  # NOTE: Should point to master on nixpkgs
-  nixpkgs = import ../nixpkgs
-    {
+  nixpkgs = import (fetchTarball {
+    url = "https://github.com/nixos/nixpkgs/tarball/7e93638ca77c87d0441e57ec044d4da58077b4e4";
+    sha256 = "03bg5sqkhlgmb9zanbp6d7him7w5kaani5fkhq3x4kknhl76xzpk";
+  }) {
       overlays = [
         (import ./nix)
       ];
