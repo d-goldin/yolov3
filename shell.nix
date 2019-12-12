@@ -8,9 +8,9 @@ let
       config.allowUnfree = true;
     };
 
-in nixpkgs.python37Packages.buildPythonPackage {
-  name = "yolov3";
-  src = "./.";
+in nixpkgs.stdenv.mkDerivation {
+  name = "yolov3-testbed";
+
   buildInputs = with nixpkgs; with python37Packages; [
     cudatoolkit
     pytorch
