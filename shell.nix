@@ -22,5 +22,6 @@ in nixpkgs.stdenv.mkDerivation {
     pillow
     tqdm
     python37Full
+    ipython
   ];
 }
